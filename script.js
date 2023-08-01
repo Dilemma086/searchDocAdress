@@ -1,7 +1,8 @@
 const inpSearch = document.querySelector('.inp_search')
 const trs = document.querySelectorAll('.card')
 const blockPlaceholder = document.querySelector('.blockPlaceholder')
-console.log(trs);
+const adress = document.querySelectorAll('.adressDocTer')
+console.log(adress);
 
 const searchDoc = (e) => {
     const input = e.target;

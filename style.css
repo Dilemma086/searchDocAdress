@@ -1,0 +1,10 @@
+body {
+   width: auto; 
+   margin: 15px 60px;
+}
+.adressDocTer{
+    display: inline-block;
+}
+.content{
+    flex-direction: column;
+}
