@@ -2,7 +2,6 @@ const inpSearch = document.querySelector('.inp_search')
 const trs = document.querySelectorAll('.card')
 const blockPlaceholder = document.querySelector('.blockPlaceholder')
 const adress = document.querySelectorAll('.adressDocTer')
-console.log(adress);
 
 const searchDoc = (e) => {
     const input = e.target;
@@ -12,14 +11,14 @@ const searchDoc = (e) => {
         const content = item.querySelector('.content').textContent
         req.test(content) ?  arr.push(content) : false
     })
+    console.log(req)
     setPlaceholder(arr, req)
 }
 
 const setPlaceholder = (arr, req) => {
-    console.log(arr);
     arr.forEach(item => {
         const str = item
-     console.log(  str.match(req).input)
+        // console.log(str.match(req).input)
     })
 }
 
