@@ -11,16 +11,15 @@ const searchDoc = (e) => {
         const content = item.querySelector('.content').textContent
         req.test(content) ?  arr.push(content) : false
     })
-    console.log(req)
     setPlaceholder(arr, req)
 }
 
 const setPlaceholder = (arr, req) => {
     arr.forEach(item => {
         const str = item
-        // console.log(str.match(req).input)
+        const dataText = str.match(req).input
+        console.log(dataText.match(req))
     })
 }
-
 
 inpSearch.addEventListener('input', searchDoc)
