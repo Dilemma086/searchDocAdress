@@ -8,3 +8,6 @@ body {
 .content{
     flex-direction: column;
 }
+.active{
+    border: 1px red solid;
+}
