@@ -11,3 +11,16 @@ body {
 .active{
     border: 1px red solid;
 }
+.blockPlaceholder{
+    position: absolute;
+    left: 40px;
+    height: 250px;
+    overflow: hidden;
+}
+label{
+    display: block;
+}
+.modalOpenTer{
+    position: absolute;
+    top: 0;
+}
