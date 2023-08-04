@@ -64,18 +64,28 @@ inpSearch.addEventListener('input', (e) => {
     searchDoc(inpSearch.value)
 })
 
-
-
 const finalSearch = () => {
        adress.forEach((item) =>{
         if(inpSearch.value === item.textContent){
-
-            const block = item.parentNode.parentElement.childNodes[1].cloneNode(true)
-            const div = document.createElement('div')
-            div.classList.add('modalOpenTer')
-            body.append(div)
-            document.querySelector('.modalOpenTer').append(block)
-            
+            const obj =item.parentElement.parentElement.childNodes[1].children
+            const obj2 = item.parentElement.parentElement.childNodes[5].children;
+            const numUch = item.parentElement.parentElement.previousElementSibling.previousElementSibling.innerHTML
+            const modalOpen = document.createElement('div')
+            modalOpen.classList.add('modalOpen')
+            body.append(modalOpen)
+            const modalOpenTer = document.createElement('div')
+            modalOpenTer.classList.add('modalOpenTer')
+            modalOpen.append(modalOpenTer)
+            modalOpenTer.innerHTML = `
+                <span class="contCloss"> x </span>
+                <h1>${numUch}</h1>
+                <div class="contImg"><img src='${obj[0].src}'/></div> 
+                <div class="contName">${obj[1].textContent}</div>
+                <div class=contContact">${obj2[0].textContent}</div>
+            `
+            const contCloss = document.querySelector('.contCloss')
+            contCloss.addEventListener('click', () =>{document.querySelector('.modalOpen').remove()})
         }
     })
 }
+
