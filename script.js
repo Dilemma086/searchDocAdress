@@ -16,7 +16,7 @@ if(document.querySelector('.inp_search') != null){
                 if(req.test(item.textContent.toLowerCase()) === true){
                     let li = document.createElement('li')
                     li.appendChild(document.createTextNode(item.textContent))
-                    blockPlaceholder.style.height = (count * 22) + 'px'
+                    blockPlaceholder.style.height = (count * 42) + 'px'
                     blockPlaceholder.append(li)
                     count++
                 }

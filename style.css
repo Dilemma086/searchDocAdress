@@ -2,14 +2,14 @@
 .adressDocTer{
     display: inline-block;
   }
-  .content{
+  .contentTrp{
     flex-direction: column;
   }
   .searchBlock{
     text-align: right;
   }
   .searchBlock label{
-    font-weight: 600 !important;
+   
     margin-bottom: 15px;
   }
   .inp_search{
@@ -30,11 +30,12 @@
   .blockPlaceholder{
     position: absolute;
     height: 0px;
+    top: 33px;
     overflow: hidden;
     background-color: white;
     max-height: 250px;
     overflow: hidden;
-    right: 66px;
+    right: 82px;
     width: 246px;
     padding-left: 10px;
     text-align: left;
