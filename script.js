@@ -19,7 +19,6 @@ if(document.querySelector('.inp_search') != null){
                     blockPlaceholder.style.height = (count * 22) + 'px'
                     blockPlaceholder.append(li)
                     count++
-                    console.log(count);
                 }
             })
         }
@@ -39,7 +38,6 @@ if(document.querySelector('.inp_search') != null){
         finalSearch()
     })
     
-
     const CleaningLi = () => {
         let allLi = Array.from(document.querySelectorAll('li'))
         allLi.map(item=>item.remove())
@@ -88,7 +86,10 @@ if(document.querySelector('.inp_search') != null){
                     }
                 }
                 const contCloss = document.querySelector('.contCloss')
-                contCloss.addEventListener('click', () =>{document.querySelector('.modalOpen').remove()})
+                contCloss.addEventListener('click', () => {
+                    document.querySelector('.modalOpen').remove()
+                    
+                })
             }
         })
     }
