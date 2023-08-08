@@ -6,11 +6,19 @@ if(document.querySelector('.inp_search') != null){
     const adress = document.querySelectorAll('.adressDocTer')
     const body = document.querySelector('body')
     const blockPlaceholder = document.querySelector('.blockPlaceholder')
+    const globalBlockDiv = document.createElement('div') 
+    const clueBlock = document.createElement('div')
     
     const searchDoc = (text) => {
         let count = 1 
         if(text.length>1){
-            
+            clueBlock.classList.add('clue') 
+            searchBlock.append(clueBlock)
+            clueBlock.innerHTML = `
+                
+                <img src="https://совбольница.рф/images/icons/arrow.png"/>
+                <p> Выберите адрес</p>
+            `
             adress.forEach((item) =>{
                 const req = new RegExp(text.toLowerCase())
                 if(req.test(item.textContent.toLowerCase()) === true){
@@ -28,13 +36,21 @@ if(document.querySelector('.inp_search') != null){
                     inpSearch.value = e.target.textContent
                     blockPlaceholder.style.height = "0px"
                     count = 1
-                    CleaningLi()  
+                    CleaningLi() 
+                    clueBlock.remove() 
             })
         })
        
     }
-        
+
+    globalBlockDiv.addEventListener('click', () => {
+        blockPlaceholder.style.height = "0px"
+        globalBlockDiv.remove()
+    })
+
     inpSubmit.addEventListener('click', () =>{
+        globalBlockDiv.remove()
+        searchBlock.style.zIndex = "0"
         finalSearch()
     })
     
@@ -47,9 +63,16 @@ if(document.querySelector('.inp_search') != null){
     inpSearch.addEventListener('input', (e) => {
         CleaningLi()
         searchDoc(inpSearch.value)
-        
     })
+
     
+
+    inpSearch.addEventListener('focus', () => {
+        searchBlock.style.zIndex = "1"
+        globalBlockDiv.classList.add('curtain')
+        body.append(globalBlockDiv)
+    })
+
     const finalSearch = () => {
            adress.forEach((item) => {
             if(inpSearch.value === item.textContent){
