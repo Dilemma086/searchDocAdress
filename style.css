@@ -1,10 +1,141 @@
-body {
-   width: auto; 
-   margin: 15px 60px;
+/* поиск врача по странице */
+body{
+  margin: 25px 50px;
 }
 .adressDocTer{
     display: inline-block;
-}
-.content{
+  }
+  .contentTrp{
     flex-direction: column;
-}
+  }
+  .searchBlock{
+    position: relative;
+    text-align: right;
+    
+  }
+  .searchBlock label{
+    margin-bottom: 15px;
+  }
+  .inp_search{
+    padding: 5px 7px;
+    border-radius: 5px;
+    border: 1px solid #efbf88;
+    width: 250px ;
+    margin-right: 10px;
+  }
+  .inp_submit{
+    color: white;
+    background-color: #efbf88;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 7px;
+    box-shadow: 0px 0px 5px #efbf88;
+  }
+  .inp_submit:hover{
+    box-shadow: 0px 0px 10px #efbf88;
+  }
+  .blockPlaceholder{
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    background-color: white;
+    max-height: 250px;
+    overflow: hidden;
+    top: 29px;
+    right: 67px;
+    width: 246px;
+    padding-left: 10px;
+    text-align: left;
+    box-shadow: 0px 0px 5px #ccc;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  label{
+    display: inline-block;
+    color: white;
+  }
+  .modalOpen{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .8);
+  }
+  .modalOpenTer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 600px;
+    height: 460px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .modalOpenTer h1{
+    text-align: center;
+    font-size: 15px;
+    margin: 25px 15px;
+  }
+  .contImg img{
+   height: 80px;
+   width: auto;
+   border-radius: 5px;
+  }
+  .contCloss{
+    cursor: pointer;
+    position: absolute;
+    right: -16px;
+    color: white;
+    top: -19px;
+  }
+  .contCloss img{
+    width: 15px;
+    filter: invert(100%);
+  }
+  .modalBlock,
+  .modalTitel{
+    display: flex;
+    margin: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modalTitel1,
+  .modalTitel2{
+    font-weight: 600;
+  }
+  .modalTitel,
+  .modalBlock{
+    border: 1px #ccc solid;
+    padding: 15px;
+  }
+  .curtain{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .5);
+  }
+  .clue{
+    position: absolute;
+    right: 317px;
+    height: 100px;
+    width: 223px;
+    z-index: 1;
+  }
+  .clue p{
+    color: white;
+  }
+  .clue img{
+    width: 25px;
+    filter: invert(100%);
+    transform: rotate(90deg) scale(1, -1);
+  }
