@@ -8,14 +8,17 @@ if(document.querySelector('.inp_search') != null){
     const blockPlaceholder = document.querySelector('.blockPlaceholder')
     const globalBlockDiv = document.createElement('div') 
     const clueBlock = document.createElement('div')
+    const searchParg = document.querySelector('.searchParg')
+    const inputBlock = document.querySelector('.inputBlock')
+    const searchResult = document.querySelector('.searchResult')
+    const modalOpenTer = document.createElement('div')
     
     const searchDoc = (text) => {
         let count = 1 
         if(text.length>1){
             clueBlock.classList.add('clue') 
-            searchBlock.append(clueBlock)
+            inputBlock.append(clueBlock)
             clueBlock.innerHTML = `
-                
                 <img src="https://совбольница.рф/images/icons/arrow.png"/>
                 <p> Выберите адрес</p>
             `
@@ -46,12 +49,16 @@ if(document.querySelector('.inp_search') != null){
     globalBlockDiv.addEventListener('click', () => {
         blockPlaceholder.style.height = "0px"
         globalBlockDiv.remove()
+        searchParg.classList.remove('activeP')
     })
 
     inpSubmit.addEventListener('click', () =>{
+        modalOpenTer.remove()
+        searchParg.classList.remove('activeP')
         globalBlockDiv.remove()
         searchBlock.style.zIndex = "0"
         finalSearch()
+        inpSearch.value = ''
     })
     
     const CleaningLi = () => {
@@ -65,10 +72,10 @@ if(document.querySelector('.inp_search') != null){
         searchDoc(inpSearch.value)
     })
 
-    
-
     inpSearch.addEventListener('focus', () => {
+        
         searchBlock.style.zIndex = "1"
+        searchParg.classList.add('activeP')
         globalBlockDiv.classList.add('curtain')
         body.append(globalBlockDiv)
     })
@@ -79,12 +86,13 @@ if(document.querySelector('.inp_search') != null){
                 const obj =item.parentElement.parentElement.childNodes[1].children
                 const obj2 = item.parentElement.parentElement.childNodes[5].children;
                 const numUch = item.parentElement.parentElement.previousElementSibling.previousElementSibling.innerHTML
-                const modalOpen = document.createElement('div')
-                modalOpen.classList.add('modalOpen')
-                body.append(modalOpen)
-                const modalOpenTer = document.createElement('div')
+                // const modalOpen = document.createElement('div')
+                // modalOpen.classList.add('modalOpen')
+                // body.append(modalOpen)
+               
                 modalOpenTer.classList.add('modalOpenTer')
-                modalOpen.append(modalOpenTer)
+                // modalOpen.append(modalOpenTer)
+                searchResult.append(modalOpenTer)
                 modalOpenTer.innerHTML = `
                     <span class="contCloss"> <img src="https://совбольница.рф/images/icons/close.png"/> </span>
                     <h1>${numUch}</h1>

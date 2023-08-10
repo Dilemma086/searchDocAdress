@@ -2,27 +2,23 @@
 body{
   margin: 25px 50px;
 }
+.blockDoc{
+  display: none;
+}
 .adressDocTer{
     display: inline-block;
   }
-  .contentTrp{
+.contentTrp{
     flex-direction: column;
   }
-  .searchBlock{
+.searchBlock{
     position: relative;
-    text-align: right;
-    
-  }
+    text-align: center;
+}
   .searchBlock label{
     margin-bottom: 15px;
   }
-  .inp_search{
-    padding: 5px 7px;
-    border-radius: 5px;
-    border: 1px solid #efbf88;
-    width: 250px ;
-    margin-right: 10px;
-  }
+  
   .inp_submit{
     color: white;
     background-color: #efbf88;
@@ -38,18 +34,18 @@ body{
   .blockPlaceholder{
     position: absolute;
     height: 0px;
-    overflow: hidden;
-    background-color: white;
     max-height: 250px;
     overflow: hidden;
-    top: 29px;
-    right: 67px;
+    top: 37px;
+    right: 2px;
     width: 246px;
     padding-left: 10px;
+    background-color: #7f7f7f;
     text-align: left;
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 0px 5px #efbf88;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    color: #fff;
   }
   label{
     display: inline-block;
@@ -66,15 +62,8 @@ body{
     background-color: rgba(0,0,0, .8);
   }
   .modalOpenTer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     margin: auto;
     width: 600px;
-    height: 460px;
-    background-color: white;
     border-radius: 8px;
   }
   .modalOpenTer h1{
@@ -126,10 +115,12 @@ body{
   }
   .clue{
     position: absolute;
-    right: 317px;
-    height: 100px;
+    right: 256px;
+    height: 98px;
     width: 223px;
     z-index: 1;
+    top: 58px;
+    text-align: right;
   }
   .clue p{
     color: white;
@@ -139,3 +130,56 @@ body{
     filter: invert(100%);
     transform: rotate(90deg) scale(1, -1);
   }
+
+  .inp_search {
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border: solid 3px #efbf88;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+    color: white;
+  }
+  .searchBlock > div{
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+  }
+  .searchBlock>p {
+    margin-bottom: 15px;
+  }
+  .searchBlock > div::after{
+    content: "";
+    background: #efbf88;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 27px;
+    right: -2px;
+    transform: rotate(135deg);
+  }
+  
+  .inp_search::placeholder {
+    color: white;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+  }
+  .inp_search:focus::placeholder {
+    opacity: 1;
+  }
+  .inp_search:focus,
+  .inp_search:not(:placeholder-shown) {
+    width: 250px;
+  }
+  .activeP{
+    color: white;
+    z-index: 1;
+  }
+  .searchResult{
+    display: block;
+  }
+  
