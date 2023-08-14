@@ -2,6 +2,12 @@
 body{
   margin: 25px 50px;
 }
+.office{
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-bottom: 40px;
+
+}
 .blockDoc{
   display: none;
 }
@@ -15,22 +21,65 @@ body{
     position: relative;
     text-align: center;
 }
+.Terapevt{
+  margin-top: 45px;
+  display: flex;
+  color: #e77338;
+  text-transform: uppercase;
+}
+
+.Terapevt img{
+  width: 250px;
+}
+.descriptTer {
+  display: block;
+  padding: 0 20px;
+}
+.descriptTer::before{
+  content: "";
+  display: block;
+  border-top: 2px #303030 solid;
+  width: 300px;
+}
+.descriptTer>p:first-child {
+  padding-top: 25px;
+}
+.titleBlockSearch{
+  border-left: 2px  #e77338 solid;
+  color:  #e77338;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.titleBlockSearch h4{
+  text-align: left;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.searchParg{
+  font-size: 13px;
+}
+
   .searchBlock label{
     margin-bottom: 15px;
   }
   
   .inp_submit{
     color: white;
-    background-color: #efbf88;
+    background-color: #e77338;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 7px;
-    box-shadow: 0px 0px 5px #efbf88;
+    box-shadow: 0px 0px 5px #e77338;
   }
   .inp_submit:hover{
-    box-shadow: 0px 0px 10px #efbf88;
-  }
+    box-shadow: 0px 0px 10px #e77338;
+  } 
   .blockPlaceholder{
     position: absolute;
     height: 0px;
@@ -42,7 +91,7 @@ body{
     padding-left: 10px;
     background-color: #7f7f7f;
     text-align: left;
-    box-shadow: 0px 0px 5px #efbf88;
+    box-shadow: 0px 0px 5px #e77338;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     color: #fff;
@@ -131,14 +180,16 @@ body{
     transform: rotate(90deg) scale(1, -1);
   }
 
-  .inp_search {
+
+  /*старая кнопка */
+   .inp_search {
     display: inline-block;
     position: relative;
     background: transparent;
     width: 35px;
     height: 35px;
     padding: 10px;
-    border: solid 3px #efbf88;
+    border: solid 3px #e77338;
     outline: none;
     border-radius: 35px;
     transition: width 0.5s;
@@ -154,7 +205,7 @@ body{
   }
   .searchBlock > div::after{
     content: "";
-    background: #efbf88;
+    background: #e77338;
     width: 4px;
     height: 20px;
     position: absolute;
@@ -182,4 +233,5 @@ body{
   .searchResult{
     display: block;
   }
-  
+
+

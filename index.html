@@ -10,24 +10,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    
-    <div class="Terapevt">
-        <h2>ТЕРАПЕВТИЧЕСКОЕ ОТДЕЛЕНИЕ ПОЛИКЛИНИКИ</h2>
-        <p>Заведующий терапевтическим отделением взрослой поликлиники</p>
-        <img src="https://совбольница.рф/images2016/AntonovaOV_1.jpg" alt="" />
-        <h4>Антонова Ольга Владимировна</h4>
-        <p>кабинет № 213<br /> тел. 6-20-79</p>
+    <h2 class="office">ТЕРАПЕВТИЧЕСКИЙ ОФИС</h2>
+
+    <div class="titleBlockSearch">
+        <h4>Найти своего терапевта по адресу</h4>
+        <p class="searchParg">Нажмите на значок поиска, затем введите<br> название микрорайона, улицы, переулка.</p>
     </div>
-    <div class="searchBlock">
-        <h3>Найти терапевта по адресу</h3> 
-        <p class="searchParg">Нажмите на значок поиска, затем введите название микрорайона, улицы, переулка.</p>
+    
+
+   <div class="searchBlock">
         <div class="inputBlock"><input type="text" class="inp_search" placeholder="Введите адрес..."/> 
             <p class="blockPlaceholder"></p>
         </div>
         <input type="submit" value="Поиск" class="inp_submit" />
-        
     </div>
+    
+    <div class="Terapevt">
+        <div> <img src="https://совбольница.рф/images2016/antonova_olga_vladimirovna.jpg" alt="" /></div>
+        <div class="descriptTer">
+            <p>Антонова Ольга Владимировна</p>
+            <p>Заведующий терапевтическим отделением взрослой поликлиники</p>
+            <p>кабинет № 213</p>
+            <p>тел. 6-20-79</p>
+        </div>
+    </div>
+    
     <div class="searchResult"></div>
     <div class="blockDoc">
         <div class="titelTerapevt">ПЕРВЫЙ УЧАСТОК ТЕРАПЕВТИЧЕСКОГО ОТДЕЛЕНИЯ ПОЛИКЛИНИКИ</div>
@@ -38,6 +45,7 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+        <img src="https://совбольница.рф/img/Makarova.png" alt="" />
         <p>Медицинская сестра участковая<br />Макарова Елена Юрьевна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">переулок Строительный</span> <span class="adressDocTer">ул. Мичурина</span> <span class="adressDocTer">ул. Киевская 1-31</span> <span class="adressDocTer">ул. Гастелло 35-43; 26-28</span></div>
@@ -67,7 +75,8 @@
         <div class="nameTerapevt3">Номер кабинета,телефон рабочий</div>
         </div>
         <div class="itemTerapevt card">
-        <div class="itemTerapevt1"><img src="https://совбольница.рф/files/Bakieva.jpg" alt="" />
+        <div class="itemTerapevt1">
+            <img src="https://совбольница.рф/img/Bakieva.png" alt="" />
         <p>Врач-терапевт участковый<br /> Бакиева Юлия Александровна</p>
         <img src="https://совбольница.рф/files/Sambur.jpg" alt="" />
         <p>Медицинская сестра участковая<br /> Самбур Оксана Игоревна</p>
@@ -85,6 +94,7 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+            <img src="https://совбольница.рф/img/Sizikova.png" alt="" />
         <p>Медицинская сестра участковая<br /> Сизикова Елена Сергеевна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Киевская, 27</span> <span class="adressDocTer">ул. Новая, 1а, 1б, 1в</span> <span class="adressDocTer">ул. Строительная, 17-37; 26-5</span> <span class="adressDocTer">ул. Таежная, 5-29; 10-34</span> <span class="adressDocTer">ул. Курчатова, 15-43; 16-40</span> <span class="adressDocTer">ул. Кирова, 23-25; 20-46</span> <span class="adressDocTer">ул. З. Космодемьянской, 17-33; 18-38</span> <span class="adressDocTer">ул. Лесная, 23-43; 12-32</span> <span class="adressDocTer">ул. Гагарина, 21-55; 20-58</span> <span class="adressDocTer">ул. Ленина, 20, 20а, 20б</span></div>
@@ -100,6 +110,7 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+        
         <p>Фельдшер<br />Шананина Людмила Евгеньевна</p>
         <img src="https://совбольница.рф/files/5_uch_ms_ZamaraevaIN.jpg" alt="" />
         <p>Медицинская сестра участковая<br /> Замараева Ирина Николаевна</p>
@@ -117,6 +128,7 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+            
         <p>Медицинская сестра участковая<br /> Гусак Татьяна Владимировна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Олега Кошевого</span> <span class="adressDocTer">ул. Калинина 1-25;2-26, кроме 4 по 10</span> <span class="adressDocTer">ул. Ленина 1-17; 2-10</span> <span class="adressDocTer">ул. Орджоникидзе, кроме 1 по 7</span> <span class="adressDocTer">Переулок Восточный</span></div>
@@ -131,7 +143,8 @@
         <div class="nameTerapevt3">Номер кабинета,телефон рабочий</div>
         </div>
         <div class="itemTerapevt card">
-        <div class="itemTerapevt1"><img src="https://совбольница.рф/files/7_uch_ms_PetrochenkoYV.jpg" alt="" />
+        <div class="itemTerapevt1">
+            <img src="https://совбольница.рф/img/Petrochenko.png" alt="" />
         <p>Медицинская сестра участковая <br /> Петроченко Яна Викторовна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Некрасова</span> <span class="adressDocTer">ул. Котовского</span> <span class="adressDocTer">ул. Кедровая</span> <span class="adressDocTer">ул. Профсоюзная</span> <span class="adressDocTer">ул. Октябрьская</span> <span class="adressDocTer">ул. Горького</span> <span class="adressDocTer">ул. Обская</span> <span class="adressDocTer">ул. Энергетиков</span> <span class="adressDocTer">ул. Северная</span> <span class="adressDocTer">ул. Сосновая</span> <span class="adressDocTer">ул. Гайдара</span> <span class="adressDocTer">Свинокомплекс</span> <span class="adressDocTer">ул. Ветеранов</span> <span class="adressDocTer">ул. Соболиная</span> <span class="adressDocTer">ул. Свердлова</span> <span class="adressDocTer">ул. Школьная</span> <span class="adressDocTer">ул. Славянская</span> <span class="adressDocTer">ул. Свободы</span> <span class="adressDocTer">ул. Деревообработчиков</span> <span class="adressDocTer">ул. Хвойная (четная)</span> <span class="adressDocTer">пер. Ветеранов</span> <span class="adressDocTer">ул. Вятско-Полянская</span> <span class="adressDocTer">пер. Свободы</span></div>
@@ -147,6 +160,7 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+            
         <p>Врач-терапевт участковый<br /> Грибанова Надежда Рудольфовна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Советская, 1-31, 51-107</span> <span class="adressDocTer">ул. Железнодорожная</span> <span class="adressDocTer">мкр. Аэропорт</span> <span class="adressDocTer">МК-152</span> <span class="adressDocTer">ДСУ</span></div>
@@ -176,7 +190,7 @@
         <div class="nameTerapevt3">Номер кабинета,телефон рабочий</div>
         </div>
         <div class="itemTerapevt card">
-        <div class="itemTerapevt1"><img src="https://совбольница.рф/images2016/Boboev.jpg" alt="" />
+        <div class="itemTerapevt1"><img src="https://совбольница.рф/img/Boboev.png" alt="" />
         <p>Врач-терапевт участковый<br /> Бобоев Шавкатжон Ниматбоевич</p>
         <p>Медицинская сестра участковая<br /> Долгова Екатерина Викторовна</p>
         </div>
@@ -208,8 +222,9 @@
         </div>
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
+            <img src="https://совбольница.рф/img/Sazontova.png" alt="" />
         <p>Фельдшер <br />Сазонтова Анна Касимьяновна</p>
-        <img src="https://совбольница.рф/images2016/Avdeeva.jpg" alt="" />
+        <img src="https://совбольница.рф/img/Avdeeva.png" alt="" />
         <p>Медицинская сестра участковая<br />Авдеева Наиля Фидарисовна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Картопьинская</span> <span class="adressDocTer">ул. Весенняя</span> <span class="adressDocTer">Переулок Зелёный</span> <span class="adressDocTer">Переулок Тихий</span> <span class="adressDocTer">ул. Нефтяников</span> <span class="adressDocTer">ул. Берёзовая</span> <span class="adressDocTer">ул. Рабочая</span> <span class="adressDocTer">ул. Сев. Кольцевая</span> <span class="adressDocTer">ул. Шукшина</span> <span class="adressDocTer">ул. Зелёная</span> <span class="adressDocTer">ул. Энтузиастов</span> <span class="adressDocTer">ул. Ясная</span> <span class="adressDocTer">ул. Югорская</span> <span class="adressDocTer">ул. Губкина</span> <span class="adressDocTer">ул. Хвойная (нечётная) с 37 дома</span> <span class="adressDocTer">ул. Макаренко (от Губкина и до конца)</span> <span class="adressDocTer">ул. Коммунистическая 94-112; 79-95</span> <span class="adressDocTer">ул. Юбилейная 103-121; 60-66</span></div>
@@ -226,7 +241,7 @@
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
         <p>Фельдшер <br /> Ильина Надежда Алексеевна</p>
-        <img src="https://совбольница.рф/images2016/Badretdinova.jpg" alt="" />
+        <img src="https://совбольница.рф/img/Batretdinova.png" alt="" />
         <p>Медицинская сестра участковая<br />Бадретдинова Ирина Александровна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">Переулок Энергетиков</span> <span class="adressDocTer">ул. Первомайская</span> <span class="adressDocTer">ул. Пушкина</span> <span class="adressDocTer">ул. Геологов</span> <span class="adressDocTer">ул. Репина</span> <span class="adressDocTer">ул. Чкалова</span> <span class="adressDocTer">ул. 8 марта</span> <span class="adressDocTer">ул. Трассовиков</span> <span class="adressDocTer">ул. Декабристов</span> <span class="adressDocTer">ул. Монтажников</span> <span class="adressDocTer">ул. Октябрьская до ул. Добровольцев</span> <span class="adressDocTer">Мкр. Солнечный</span> <span class="adressDocTer">ул. Промышленная</span> <span class="adressDocTer">ул. Добровольцев</span> <span class="adressDocTer">ул. Солнечная</span></div>
@@ -243,6 +258,7 @@
         <div class="itemTerapevt card">
         <div class="itemTerapevt1">
         <p>Врач-терапевт участковый<br /> Попова Елизавета Александровна</p>
+        <img src="https://совбольница.рф/img/Starostina.png" alt="" />
         <p>Медицинская сестра участковая<br />Старостина Кристина Александровна</p>
         </div>
         <div class="itemTerapevt2 contentTrp"><span class="adressDocTer">ул. Строительная 1-13; 2-20</span> <span class="adressDocTer">ул. Таёжная 1</span> <span class="adressDocTer">Переулок Курчатова</span> <span class="adressDocTer">ул. Курчатова1-7; 2-6</span> <span class="adressDocTer">Переулок Калининский</span> <span class="adressDocTer">Переулок Кирова</span> <span class="adressDocTer">ул. Калинина 27; 30</span> <span class="adressDocTer">ул. Калинина 4 и 6</span> <span class="adressDocTer">ул. Орджоникидзе 1 и 3</span></div>
