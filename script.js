@@ -73,7 +73,6 @@ if(document.querySelector('.inp_search') != null){
     })
 
     inpSearch.addEventListener('focus', () => {
-        
         searchBlock.style.zIndex = "1"
         searchParg.classList.add('activeP')
         globalBlockDiv.classList.add('curtain')
@@ -86,35 +85,32 @@ if(document.querySelector('.inp_search') != null){
                 const obj =item.parentElement.parentElement.childNodes[1].children
                 const obj2 = item.parentElement.parentElement.childNodes[5].children;
                 const numUch = item.parentElement.parentElement.previousElementSibling.previousElementSibling.innerHTML
-                // const modalOpen = document.createElement('div')
-                // modalOpen.classList.add('modalOpen')
-                // body.append(modalOpen)
-               
                 modalOpenTer.classList.add('modalOpenTer')
-                // modalOpen.append(modalOpenTer)
                 searchResult.append(modalOpenTer)
                 modalOpenTer.innerHTML = `
-                    <span class="contCloss"> <img src="https://совбольница.рф/images/icons/close.png"/> </span>
                     <h1>${numUch}</h1>
-                    <div class="modalTitel">
-                        <div class="modalTitel1">Должность Ф.И.О.</div>
-                        <div class="modalTitel2">Номер кабинета, <br> телефон рабочий</div>
+                    <div class="blockUchastok">
+                        <div class="blockUchastokLeft">
+                            
+                        </div>
+                        <div class="blockUchastokRight">
+                           
+                        </div>
                     </div>
-                    <div class="modalBlock">
-                        <div class="contImg"></div>
-                        <div class=contContact"><p>${obj2[0].innerHTML}</p></div>
-                    </div>    
+                    <div class="blockUchastokContact">${obj2[0].innerHTML} </div> 
                 `
-                for(let i=0; i<obj.length; i++){
-                    if(obj[i].tagName === 'IMG'){
-                        const contImg = document.querySelector('.contImg')
-                        contImg.insertAdjacentHTML("beforeend",  `<img  src='${obj[i].src}'/>`)
-                    }
-                    else{
-                        const contImg = document.querySelector('.contImg')
-                        contImg.insertAdjacentHTML("beforeend",  `<p>${obj[i].innerHTML}</p>`)
+                for(let i=0; i<obj.length; i = i+4){
+                    const blockUchastokLeft = document.querySelector('.blockUchastokLeft')
+                    blockUchastokLeft.insertAdjacentHTML("beforeend",  `
+                        <div><img  src='${obj[i].src}'/></div>
                         
-                    }
+                        <p>${obj[i+1].innerHTML}</p>
+                    `)
+                    const blockUchastokRight = document.querySelector('.blockUchastokRight')
+                    blockUchastokRight.insertAdjacentHTML("beforeend",  `
+                        <div><img  src='${obj[i+2].src}'/></div>
+                        <p>${obj[i+3].innerHTML}</p>
+                    `)
                 }
                 const contCloss = document.querySelector('.contCloss')
                 contCloss.addEventListener('click', () => {
