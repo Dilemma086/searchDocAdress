@@ -89,6 +89,7 @@ if(document.querySelector('.inp_search') != null){
                 searchResult.append(modalOpenTer)
                 modalOpenTer.innerHTML = `
                     <h1>${numUch}</h1>
+                    <div class="blockUchastokContact">${obj2[0].innerHTML} </div>
                     <div class="blockUchastok">
                         <div class="blockUchastokLeft">
                             
@@ -97,26 +98,30 @@ if(document.querySelector('.inp_search') != null){
                            
                         </div>
                     </div>
-                    <div class="blockUchastokContact">${obj2[0].innerHTML} </div> 
+                     
                 `
                 for(let i=0; i<obj.length; i = i+4){
                     const blockUchastokLeft = document.querySelector('.blockUchastokLeft')
                     blockUchastokLeft.insertAdjacentHTML("beforeend",  `
-                        <div><img  src='${obj[i].src}'/></div>
+                        <div><img src='${obj[i].src}'/></div>
                         
                         <p>${obj[i+1].innerHTML}</p>
                     `)
+                    if(obj[(i + 2)] != undefined){
                     const blockUchastokRight = document.querySelector('.blockUchastokRight')
                     blockUchastokRight.insertAdjacentHTML("beforeend",  `
                         <div><img  src='${obj[i+2].src}'/></div>
                         <p>${obj[i+3].innerHTML}</p>
                     `)
+                    }
+                    else{
+                        document.querySelector('.blockUchastok').style.display = 'block'
+                        document.querySelector('.blockUchastok').style.textAlign = 'center'
+                        document.querySelector('.blockUchastokRight').style.display = 'none'
+                    }
                 }
-                const contCloss = document.querySelector('.contCloss')
-                contCloss.addEventListener('click', () => {
-                    document.querySelector('.modalOpen').remove()
-                    
-                })
+
+                
             }
         })
     }

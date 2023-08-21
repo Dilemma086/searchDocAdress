@@ -141,7 +141,7 @@ body{
   }
   .modalOpenTer h1{
     text-align: center;
-    font-size: 15px;
+    font-size: 34px;
     margin: 25px 15px;
   }
   .contImg img{
@@ -267,6 +267,7 @@ body{
     height: 250px;
     overflow: hidden;
     text-align: center;
+    border-bottom: 2px solid #e77338;
   }
 
   .blockUchastokLeft>div img,
@@ -278,12 +279,17 @@ body{
     padding: 20px 10px;
     font-size: 20px;
   }
-
+  .blockUchastokLeft span,
+  .blockUchastokRight span{
+    color: #e77338;
+  }
   .blockUchastokContact{
-    background-color: #e77338;
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
+  }
+  .pFontW{
+    font-weight: 700;
   }
 
 
